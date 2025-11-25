@@ -63,11 +63,10 @@ jobs:
       - name: Deploy usando action do Render
         uses: johnbeynon/render-deploy-action@v0.0.3
         with:
-          serviceId: srv-d4dp9j0dl3ps73e9qjk0
-          apiKey: ${{ secrets.DESAFIO_FINAL_JULIA }}
-          clearCache: false
+          serviceId: srv-d4ie0js9c44c739ev3mg
+          apiKey: ${{ secrets.DESAFIO_FINAL_ERICK }}
 
       - name: Acionar Deploy Hook no Render
         run: |
-          curl -X POST "${{ secrets.DESAFIOFINALDEVOPSERICK}}"
+          curl -X POST "${{ secrets.ERICK_HOOK }}"
           echo "Sinal de deploy enviado ao Render."
